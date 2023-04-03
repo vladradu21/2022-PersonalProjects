@@ -2,6 +2,7 @@ package com.projectps.cinema.service;
 
 import com.projectps.cinema.entity.User;
 import com.projectps.cinema.repository.UserRepository;
+import com.projectps.cinema.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,7 +21,7 @@ class UserServiceTest {
     private UserRepository userRepository;
 
     @InjectMocks
-    private UserService userService;
+    private UserServiceImpl userService;
 
     @BeforeEach
     public void setUp() {
@@ -67,33 +68,6 @@ class UserServiceTest {
         Assertions.assertEquals(user, result);
     }
 
-    @Test
-    public void testGetUserByEmail() {
-        // Arrange
-        User user = new User();
-        String email = "mail@email.com";
-        Mockito.when(userRepository.findByEmail(email)).thenReturn(Arrays.asList(user));
-
-        // Act
-        List<User> result = userService.getUsersByEmail(email);
-
-        // Assert
-        Assertions.assertEquals(Arrays.asList(user), result);
-    }
-
-    @Test
-    public void testGetUserByName() {
-        // Arrange
-        User user = new User();
-        String name = "name";
-        Mockito.when(userRepository.findByName(name)).thenReturn(Arrays.asList(user));
-
-        // Act
-        List<User> result = userService.getUsersByName(name);
-
-        // Assert
-        Assertions.assertEquals(Arrays.asList(user), result);
-    }
 
     @Test
     public void testUpdateUser() {

@@ -1,27 +1,37 @@
 package com.projectps.cinema.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+@Entity
+@Table(name = "actor")
+@Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table  (name = "actor")
+
 public class Actor {
 
     @Id
     @GeneratedValue
     private int id;
+
     private String name;
+
     private int age;
+
     private Gender gender;
+
     private String originCountry;
 
-    @ManyToMany(mappedBy = "actors", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "actors", fetch = FetchType.LAZY)
+
+    @JsonBackReference("movie-actors")
     private List<Movie> movies;
 }

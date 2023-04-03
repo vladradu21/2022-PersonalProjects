@@ -5,6 +5,4 @@ import com.projectps.cinema.entity.Gender;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ActorRepository extends JpaRepository<Actor, Integer> {
-    Actor findByGender(Gender gender);
-    Actor findByOriginCountry(String originCountry);
 }

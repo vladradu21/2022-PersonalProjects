@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da9ed916-7292-49f2-b9c4-e5fad3e5e594" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/cinemaSpecs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/controller/ActorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/controller/ActorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/controller/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/controller/RatingContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/controller/RatingContoller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/entity/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/entity/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/entity/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/entity/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/entity/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/entity/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/entity/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/entity/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/repository/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/service/ActorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/service/ActorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/service/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/service/RatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/service/RatingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/projectps/cinema/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/test/java/com/projectps/cinema/service/ActorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/test/java/com/projectps/cinema/service/ActorServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/test/java/com/projectps/cinema/service/MovieServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/test/java/com/projectps/cinema/service/MovieServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/test/java/com/projectps/cinema/service/RatingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/test/java/com/projectps/cinema/service/RatingServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/test/java/com/projectps/cinema/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/test/java/com/projectps/cinema/service/UserServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2N3aWP6zDlCpQNwLuSEiC3SsSLJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../popcorn/popcorn" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.projectps.cinema.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CinemaApplication">
+    <configuration name="ActorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cinema" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projectps.cinema.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.projectps.cinema.service" />
+      <option name="MAIN_CLASS_NAME" value="com.projectps.cinema.service.ActorServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cinema" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projectps.cinema.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.projectps.cinema.service" />
+      <option name="MAIN_CLASS_NAME" value="com.projectps.cinema.service.MovieServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RatingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cinema" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projectps.cinema.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.projectps.cinema.service" />
+      <option name="MAIN_CLASS_NAME" value="com.projectps.cinema.service.RatingServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cinema" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projectps.cinema.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.projectps.cinema.service" />
+      <option name="MAIN_CLASS_NAME" value="com.projectps.cinema.service.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CinemaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cinema" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projectps.cinema.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.projectps.cinema.CinemaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.CinemaApplication" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.RatingServiceTest" />
+        <item itemvalue="JUnit.ActorServiceTest" />
+        <item itemvalue="JUnit.MovieServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da9ed916-7292-49f2-b9c4-e5fad3e5e594" name="Changes" comment="" />
+      <created>1678895254532</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678895254532</updated>
+      <workItem from="1678895259963" duration="4918000" />
+      <workItem from="1678901134304" duration="2455000" />
+      <workItem from="1678908066241" duration="2000" />
+      <workItem from="1678970969516" duration="6281000" />
+      <workItem from="1678994768612" duration="382000" />
+      <workItem from="1678995225666" duration="464000" />
+      <workItem from="1679034443162" duration="7375000" />
+      <workItem from="1679053158349" duration="616000" />
+      <workItem from="1679078124076" duration="2407000" />
+      <workItem from="1679239339190" duration="22000" />
+      <workItem from="1679387842384" duration="3874000" />
+      <workItem from="1679497027463" duration="25000" />
+      <workItem from="1679500189585" duration="4034000" />
+      <workItem from="1679517689048" duration="2140000" />
+      <workItem from="1679560289428" duration="16706000" />
+      <workItem from="1679587441927" duration="378000" />
+      <workItem from="1679595814049" duration="2351000" />
+      <workItem from="1679640118323" duration="5975000" />
+      <workItem from="1679665037476" duration="19000" />
+      <workItem from="1679843777025" duration="2179000" />
+      <workItem from="1679904410459" duration="2976000" />
+      <workItem from="1679928538201" duration="93000" />
+      <workItem from="1679929024808" duration="4827000" />
+      <workItem from="1679934075641" duration="2193000" />
+      <workItem from="1679938642127" duration="1136000" />
+      <workItem from="1679942611750" duration="1360000" />
+      <workItem from="1679987373049" duration="2407000" />
+      <workItem from="1679993953562" duration="5511000" />
+      <workItem from="1680006664276" duration="7549000" />
+      <workItem from="1680025844042" duration="2366000" />
+      <workItem from="1680096632382" duration="3352000" />
+      <workItem from="1680172635247" duration="2403000" />
+      <workItem from="1680183985452" duration="2275000" />
+      <workItem from="1680242639545" duration="4182000" />
+      <workItem from="1680248308489" duration="712000" />
+      <workItem from="1680259703011" duration="37000" />
+      <workItem from="1680294692280" duration="878000" />
+      <workItem from="1680295595341" duration="297000" />
+      <workItem from="1680332694345" duration="2190000" />
+      <workItem from="1680335660205" duration="2802000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

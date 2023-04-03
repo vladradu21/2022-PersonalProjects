@@ -2,6 +2,7 @@ package com.projectps.cinema.service;
 
 import com.projectps.cinema.entity.Actor;
 import com.projectps.cinema.repository.ActorRepository;
+import com.projectps.cinema.service.impl.ActorServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,7 +21,7 @@ class ActorServiceTest {
     private ActorRepository actorRepository;
 
     @InjectMocks
-    private ActorService actorService;
+    private ActorServiceImpl actorService;
 
     @BeforeEach
     public void setUp() {
@@ -64,32 +65,6 @@ class ActorServiceTest {
 
         // Act
         Actor result = actorService.getActorById(id);
-
-        // Assert
-        Assertions.assertEquals(actor, result);
-    }
-
-    @Test
-    public void testGetActorByGender() {
-        // Arrange
-        Actor actor = new Actor();
-        Mockito.when(actorRepository.findByGender(actor.getGender())).thenReturn(actor);
-
-        // Act
-        Actor result = actorService.getActorByGender(actor.getGender());
-
-        // Assert
-        Assertions.assertEquals(actor, result);
-    }
-
-    @Test
-    public void testGetActorByOriginCountry() {
-        // Arrange
-        Actor actor = new Actor();
-        Mockito.when(actorRepository.findByOriginCountry(actor.getOriginCountry())).thenReturn(actor);
-
-        // Act
-        Actor result = actorService.getActorByOriginCountry(actor.getOriginCountry());
 
         // Assert
         Assertions.assertEquals(actor, result);

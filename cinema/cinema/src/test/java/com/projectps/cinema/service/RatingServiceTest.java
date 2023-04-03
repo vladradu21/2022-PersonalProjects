@@ -2,6 +2,7 @@ package com.projectps.cinema.service;
 
 import com.projectps.cinema.entity.Rating;
 import com.projectps.cinema.repository.RatingRepository;
+import com.projectps.cinema.service.impl.RatingServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,7 +21,7 @@ class RatingServiceTest {
     private RatingRepository ratingRepository;
 
     @InjectMocks
-    private RatingService ratingService;
+    private RatingServiceImpl ratingService;
 
     @BeforeEach
     public void setUp() {

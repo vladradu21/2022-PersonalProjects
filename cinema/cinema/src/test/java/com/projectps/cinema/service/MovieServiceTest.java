@@ -1,9 +1,8 @@
 package com.projectps.cinema.service;
 
-import com.projectps.cinema.entity.Actor;
 import com.projectps.cinema.entity.Movie;
-import com.projectps.cinema.entity.Rating;
 import com.projectps.cinema.repository.MovieRepository;
+import com.projectps.cinema.service.impl.MovieServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,7 +24,7 @@ class MovieServiceTest {
     private MovieRepository movieRepository;
 
     @InjectMocks
-    private MovieService movieService;
+    private MovieServiceImpl movieService;
 
     @BeforeEach
     public void setUp() {
@@ -75,20 +74,6 @@ class MovieServiceTest {
         Assertions.assertEquals(movie, result);
     }
 
-    @Test
-    public void testGetMovieByTitle() {
-        // Arrange
-        Movie movie = new Movie();
-        String title = "Test Movie";
-        movie.setTitle(title);
-        Mockito.when(movieRepository.findByTitle(title)).thenReturn(movie);
-
-        // Act
-        Movie result = movieService.getMovieByTitle(title);
-
-        // Assert
-        Assertions.assertEquals(movie, result);
-    }
 
     @Test
     public void testGetMoviesByGenre() {
@@ -147,45 +132,5 @@ class MovieServiceTest {
 
         // Assert
         Mockito.verify(movieRepository, Mockito.times(1)).deleteById(id);
-    }
-
-    @Test
-    public void testAddActorToMovie() {
-        // Arrange
-        int movieId = 1;
-        Actor actor = new Actor();
-        Movie movie = new Movie();
-        movie.setId(movieId);
-        Mockito.when(movieRepository.findById(movieId)).thenReturn(Optional.of(movie));
-        Mockito.when(movieRepository.save(movie)).thenReturn(movie);
-
-        // Act
-        Movie result = movieService.addActorToMovie(movieId, actor);
-
-        // Assert
-        Mockito.verify(movieRepository, Mockito.times(1)).findById(movieId);
-        Mockito.verify(movieRepository, Mockito.times(1)).save(movie);
-        Assertions.assertEquals(movie, result);
-        Assertions.assertTrue(movie.getActors().contains(actor));
-    }
-
-    @Test
-    public void testAddRatingToMovie(){
-        //Ar
-        int movieId = 1;
-        Rating rating = new Rating();
-        Movie movie = new Movie();
-        movie.setId(movieId);
-        Mockito.when(movieRepository.findById(movieId)).thenReturn(Optional.of(movie));
-        Mockito.when(movieRepository.save(movie)).thenReturn(movie);
-
-        //Act
-        Movie result = movieService.addRatingToMovie(movieId, rating);
-
-        //Assert
-        Mockito.verify(movieRepository, Mockito.times(1)).findById(movieId);
-        Mockito.verify(movieRepository, Mockito.times(1)).save(movie);
-        Assertions.assertEquals(movie, result);
-        Assertions.assertTrue(movie.getRatings().contains(rating));
     }
 }

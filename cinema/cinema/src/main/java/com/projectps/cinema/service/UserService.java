@@ -1,50 +1,23 @@
 package com.projectps.cinema.service;
 
 import com.projectps.cinema.entity.User;
-import com.projectps.cinema.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class UserService {
+@Service
+public interface UserService {
 
-    @Autowired
-    UserRepository userRepository;
+    User saveUser(User user);
 
-    public User saveUser(User user) {
-        return userRepository.save(user);
-    }
+    List<User> saveUsers(List<User> users);
 
-    public List<User> saveUsers(List<User> users) {
-        return userRepository.saveAll(users);
-    }
+    List<User> getUsers();
 
-    public List<User> getUsers() {
-        return userRepository.findAll();
-    }
+    User getUserById(int id);
 
-    public User getUserById(int id) {
-        return userRepository.findById(id).orElse(null);
-    }
+    User updateUser(User user);
 
-    public List<User> getUsersByName(String name) {
-        return userRepository.findByName(name);
-    }
+    void deleteUser(int id);
 
-    public List<User> getUsersByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
-
-    public User updateUser(User user) {
-        User existingUser = userRepository.findById(user.getId()).orElse(null);
-        existingUser.setAdmin(user.isAdmin());
-        existingUser.setName(user.getName());
-        existingUser.setEmail(user.getEmail());
-        existingUser.setPassword(user.getPassword());
-        return userRepository.save(existingUser);
-    }
-
-    public void deleteUser(int id) {
-        userRepository.deleteById(id);
-    }
 }

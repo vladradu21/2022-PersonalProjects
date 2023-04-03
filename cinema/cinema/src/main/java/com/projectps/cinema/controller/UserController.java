@@ -1,5 +1,6 @@
 package com.projectps.cinema.controller;
 
+import com.projectps.cinema.entity.Actor;
 import com.projectps.cinema.entity.Movie;
 import com.projectps.cinema.entity.Rating;
 import com.projectps.cinema.entity.User;
@@ -8,13 +9,11 @@ import com.projectps.cinema.service.MovieService;
 import com.projectps.cinema.service.RatingService;
 import com.projectps.cinema.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 public class UserController {
 
     @Autowired
@@ -30,12 +29,12 @@ public class UserController {
     RatingService ratingService;
 
     @PostMapping("/addUser")
-    public User addUser(User user) {
+    public User addUser(@RequestBody User user) {
         return userService.saveUser(user);
     }
 
     @PostMapping("/addUsers")
-    public List<User> addUsers(List<User> users) {
+    public List<User> addUsers(@RequestBody List<User> users) {
         return userService.saveUsers(users);
     }
 
@@ -44,28 +43,18 @@ public class UserController {
         return userService.getUsers();
     }
 
-    @GetMapping("/usersByName/{name}")
-    public List<User> findUsersByName(String name) {
-        return userService.getUsersByName(name);
-    }
-
-    @GetMapping("/usersByEmail/{email}")
-    public List<User> findUsersByEmail(String email) {
-        return userService.getUsersByEmail(email);
-    }
-
     @PutMapping("/updateUser")
-    public User updateUser(User user) {
+    public User updateUser(@RequestBody User user) {
         return userService.updateUser(user);
     }
 
     @DeleteMapping("/deleteUser/{id}")
-    public void deleteUser(int id) {
+    public void deleteUser(@PathVariable int id) {
         userService.deleteUser(id);
     }
 
-    @PostMapping("/adminAddMovie{userId}}")
-    public Movie adminAddMovie(int userId, Movie movie) {
+    @PostMapping("/adminAddMovie/{userId}")
+    public Movie adminAddMovie(@PathVariable int userId, @RequestBody Movie movie) {
         User user = userService.getUserById(userId);
         if(user.isAdmin()) {
             return movieService.saveMovie(movie);
@@ -74,7 +63,7 @@ public class UserController {
     }
 
     @DeleteMapping("/adminDeleteMovie/{id}")
-    public void adminDeleteMovie(int userId, int id) {
+    public void adminDeleteMovie(@PathVariable int userId, @PathVariable int id) {
         User user = userService.getUserById(userId);
         if(user.isAdmin()) {
             movieService.deleteMovie(id);
@@ -82,7 +71,7 @@ public class UserController {
     }
 
     @PutMapping("/adminUpdateMovie")
-    public Movie adminUpdateMovie(int userId, Movie movie) {
+    public Movie adminUpdateMovie(@PathVariable int userId, @RequestBody Movie movie) {
         User user = userService.getUserById(userId);
         if(user.isAdmin()) {
             return movieService.updateMovie(movie);
@@ -90,17 +79,17 @@ public class UserController {
         return null;
     }
 
-    @PostMapping("/adminAddActor{userId}}")
-    public Movie adminAddActor(int userId, Movie movie) {
+    @PostMapping("/adminAddActor/{userId}")
+    public Actor adminAddActor(@PathVariable int userId, @RequestBody Actor actor) {
         User user = userService.getUserById(userId);
         if(user.isAdmin()) {
-            return movieService.saveMovie(movie);
+            return actorService.saveActor(actor);
         }
         return null;
     }
 
     @DeleteMapping("/adminDeleteActor/{id}")
-    public void adminDeleteActor(int userId, int id) {
+    public void adminDeleteActor(@PathVariable int userId,@RequestBody int id) {
         User user = userService.getUserById(userId);
         if(user.isAdmin()) {
             actorService.deleteActor(id);
@@ -108,26 +97,26 @@ public class UserController {
     }
 
     @PutMapping("/adminUpdateActor")
-    public Movie adminUpdateActor(int userId, Movie movie) {
+    public Actor adminUpdateActor(@PathVariable int userId,@RequestBody Actor actor) {
         User user = userService.getUserById(userId);
         if(user.isAdmin()) {
-            return movieService.updateMovie(movie);
+            return actorService.updateActor(actor);
         }
         return null;
     }
 
     @PostMapping("/userAddRating")
-    public Rating userAddRating(Rating rating) {
+    public Rating userAddRating(@RequestBody Rating rating) {
         return ratingService.saveRating(rating);
     }
 
     @DeleteMapping("/userDeleteRating/{id}")
-    public void userDeleteRating(int id) {
+    public void userDeleteRating(@PathVariable int id) {
         ratingService.deleteRating(id);
     }
 
     @PutMapping("/userUpdateRating")
-    public Rating userUpdateRating(Rating rating) {
+    public Rating userUpdateRating(@RequestBody Rating rating) {
         return ratingService.updateRating(rating);
     }
 

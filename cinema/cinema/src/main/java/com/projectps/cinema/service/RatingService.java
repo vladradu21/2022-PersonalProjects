@@ -1,43 +1,23 @@
 package com.projectps.cinema.service;
 
 import com.projectps.cinema.entity.Rating;
-import com.projectps.cinema.repository.RatingRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class RatingService {
+@Service
+public interface RatingService {
 
-    @Autowired
-    RatingRepository ratingRepository;
+    Rating saveRating(Rating rating);
 
-    public Rating saveRating(Rating rating) {
-        return ratingRepository.save(rating);
-    }
+    List<Rating> saveRatings(List<Rating> ratings);
 
-    public List<Rating> saveRatings(List<Rating> ratings) {
-        return ratingRepository.saveAll(ratings);
-    }
+    List<Rating> getRatings();
 
-    public List<Rating> getRatings() {
-        return ratingRepository.findAll();
-    }
+    List<Rating> getRatingsByScore(double score);
 
-    public List<Rating> getRatingsByScore(double score) {
-        return ratingRepository.findByScoreGreaterThanEqual(score);
-    }
+    Rating updateRating(Rating rating);
 
-    public Rating updateRating(Rating rating) {
-        Rating existingRating = ratingRepository.findById(rating.getId()).orElse(null);
-        existingRating.setTitle(rating.getTitle());
-        existingRating.setScore(rating.getScore());
-        existingRating.setDescription(rating.getDescription());
-        existingRating.setMovie(rating.getMovie());
-        existingRating.setUser(rating.getUser());
-        return ratingRepository.save(existingRating);
-    }
+    void deleteRating(int id);
 
-    public void deleteRating(int id) {
-        ratingRepository.deleteById(id);
-    }
 }

@@ -3,45 +3,44 @@ package com.projectps.cinema.controller;
 import com.projectps.cinema.entity.Rating;
 import com.projectps.cinema.service.RatingService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/rating")
 public class RatingContoller {
 
     @Autowired
     private RatingService ratingService;
 
     @PostMapping("/addRating")
-    public void addRating(Rating rating) {
+    public void addRating(@RequestBody Rating rating) {
         ratingService.saveRating(rating);
     }
 
     @PostMapping("/addRatings")
-    public void addRatings(List<Rating> ratings) {
+    public void addRatings(@RequestBody List<Rating> ratings) {
         ratingService.saveRatings(ratings);
     }
 
-    @GetMapping("/ratings")
+    @GetMapping("/allRatings")
     public List<Rating> findAllRatings() {
         return ratingService.getRatings();
     }
 
-    @GetMapping("/ratingsByScore/{score}")
-    public List<Rating> findRatingsByScore(double score) {
+    @GetMapping("/byScore/{score}")
+    public List<Rating> findRatingsByScore(@PathVariable double score) {
         return ratingService.getRatingsByScore(score);
     }
 
     @PutMapping("/updateRating")
-    public Rating updateRating(Rating rating) {
+    public Rating updateRating(@RequestBody Rating rating) {
         return ratingService.updateRating(rating);
     }
 
     @DeleteMapping("/deleteRating/{id}")
-    public void deleteRating(int id) {
+    public void deleteRating(@PathVariable int id) {
         ratingService.deleteRating(id);
     }
 

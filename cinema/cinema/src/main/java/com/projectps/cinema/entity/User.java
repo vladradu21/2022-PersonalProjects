@@ -22,6 +22,7 @@ public class User {
     private String email;
     private String password;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(targetEntity = Rating.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "userrating_fk", referencedColumnName = "id")
     private List<Rating> ratings;
 }
